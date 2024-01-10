@@ -1,0 +1,85 @@
+@import "../../../assets/styles/variables";
+
+.v-grid {
+    table {
+        width: $per-100;
+        thead {
+            display: none;
+            font-size: 0.9em;
+
+            th {
+                padding: 1em;
+            }
+        }
+
+        tbody {
+            background-color: var(--panel-grid-tbody-background-color);
+
+            tr {
+                border: $pix-2 solid rgba(var(--panel-grid-background-color));
+                display: flex;
+                flex-direction: column;
+                margin: 0.5em 0;
+
+                .theadrow {
+                    background-color: rgba(var(--panel-grid-background-color));
+                    padding: 0.2em;
+                    margin-right: 0.5em;
+                    min-width: $pix-100;
+                    max-width: $pix-100;
+                    word-break: break-all;
+                }
+            }
+
+            td {
+                display: flex;
+                flex-direction: row;
+                font-size: 0.9em;
+                text-align: left;
+
+                .icon-normal {
+                    color: var(--panel-grid-tbody-normal-icon-color);
+                }
+                
+                .icon-remove {
+                    color: var(--panel-grid-tbody-remove-icon-color);
+                }
+
+                a {
+                    margin: 0 0.3em;
+                    em {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $resolution-35em) {
+    .v-grid {
+        table {
+            background-color: rgb(var(--panel-grid-background-color));
+            thead {
+                display: table-header-group;
+            }
+            tbody {
+                tr {
+                    border: 0px;
+                    display: table-row;
+    
+                    .theadrow {
+                        display: none;
+                        margin-right: 0;
+                    }
+    
+                    td {
+                        display: table-cell;
+                        text-align: center;
+                        padding: 0.5em;
+                    }
+                }
+            }            
+        }
+    }
+}
