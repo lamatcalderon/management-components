@@ -41,5 +41,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 script.render = render;
 script.__file = "src/components/base/v-grid/v-grid.vue";
 
+const VGridPlugin = {
+    install(app) {
+        app.component('VGrid', script);
+    }
+};
+
 exports.VGrid = script;
+exports.VGridPlugin = VGridPlugin;
 //# sourceMappingURL=index.js.map
