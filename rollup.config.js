@@ -25,7 +25,11 @@ export default async function config(args) {
             clear({
                 targets: ['./dist'],
             }),
-            scss()
+            scss({
+                // Configuración de rollup-plugin-scss
+                output: 'dist/bundle.css', // Ajusta la salida según tus necesidades
+                include: ['**/*.scss'], // Patrón para incluir archivos SCSS
+            })
         ],
     };
 }
