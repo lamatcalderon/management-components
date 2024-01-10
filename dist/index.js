@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var vue = require('vue');
 
-var script = vue.defineComponent({
+var script$1 = vue.defineComponent({
     setup() {
         const vgrid = vue.ref();
         vue.onMounted(() => {
@@ -22,12 +22,12 @@ var script = vue.defineComponent({
     }
 });
 
-const _hoisted_1 = { class: "v-grid" };
-const _hoisted_2 = { ref: "vgrid" };
+const _hoisted_1$1 = { class: "v-grid" };
+const _hoisted_2$1 = { ref: "vgrid" };
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
-    vue.createElementVNode("table", _hoisted_2, [
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [
+    vue.createElementVNode("table", _hoisted_2$1, [
       vue.createElementVNode("thead", null, [
         vue.renderSlot(_ctx.$slots, "thead")
       ]),
@@ -38,15 +38,38 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script.render = render;
-script.__file = "src/components/base/v-grid/v-grid.vue";
+script$1.render = render$1;
+script$1.__scopeId = "data-v-21fa4121";
+script$1.__file = "src/components/base/v-grid/v-grid.vue";
 
-const VGridPlugin = {
-    install(app) {
-        app.component('VGrid', script);
+var script = vue.defineComponent({
+    props: {
+        title: {
+            type: String,
+            default: ""
+        }
     }
-};
+});
 
-exports.VGrid = script;
-exports.VGridPlugin = VGridPlugin;
+const _withScopeId = n => (vue.pushScopeId("data-v-09fa69e1"),n=n(),vue.popScopeId(),n);
+const _hoisted_1 = { class: "v-card" };
+const _hoisted_2 = { class: "card-title" };
+const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/vue.createElementVNode("span", null, null, -1 /* HOISTED */));
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
+    vue.createElementVNode("div", _hoisted_2, [
+      vue.createElementVNode("span", null, vue.toDisplayString(_ctx.title), 1 /* TEXT */),
+      _hoisted_3
+    ]),
+    vue.renderSlot(_ctx.$slots, "content")
+  ]))
+}
+
+script.render = render;
+script.__scopeId = "data-v-09fa69e1";
+script.__file = "src/components/base/v-card/v-card.vue";
+
+exports.VCard = script;
+exports.VGrid = script$1;
 //# sourceMappingURL=index.js.map

@@ -1,3 +1,3 @@
 import VGrid from "./components/base/v-grid/v-grid.vue";
-import { VGridPlugin } from "./plugins";
-export { VGrid, VGridPlugin };
+import VCard from "./components/base/v-card/v-card.vue";
+export { VCard, VGrid };

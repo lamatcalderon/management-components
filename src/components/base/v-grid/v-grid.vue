@@ -12,4 +12,4 @@
 </template>
 
 <script src="./v-grid.ts" lang="ts"/>
-<style src="./v-grid.scss" lang="scss"/>
+<style src="./v-grid.scss" lang="scss" scoped/>
