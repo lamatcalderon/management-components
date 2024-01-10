@@ -1,4 +1,4 @@
-.v-card[data-v-09fa69e1] {
+.v-card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 3px 1px -2px var(--panel-ng-card-box-shadow-color-1), 0 2px 2px 0 var(--panel-ng-card-box-shadow-color-2), 0 1px 5px 0 var(--panel-ng-card-box-shadow-color-3);
@@ -7,7 +7,7 @@
   padding: 0.2em;
   margin: 10px;
 }
-.v-card[data-v-09fa69e1] .card-title[data-v-09fa69e1] {
+.v-card .card-title {
   color: var(--panel-ng-card-title-font-color);
   display: flex;
   font-weight: bold;
@@ -17,7 +17,7 @@
 }
 
 @media (min-width: 35em) {
-  .v-card[data-v-09fa69e1] {
+  .v-card {
     padding: 1em;
   }
 }

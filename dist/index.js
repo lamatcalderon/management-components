@@ -50,10 +50,9 @@ var script = vue.defineComponent({
     }
 });
 
-const _withScopeId = n => (vue.pushScopeId("data-v-09fa69e1"),n=n(),vue.popScopeId(),n);
 const _hoisted_1 = { class: "v-card" };
 const _hoisted_2 = { class: "card-title" };
-const _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/vue.createElementVNode("span", null, null, -1 /* HOISTED */));
+const _hoisted_3 = /*#__PURE__*/vue.createElementVNode("span", null, null, -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [
@@ -66,7 +65,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script.render = render;
-script.__scopeId = "data-v-09fa69e1";
 script.__file = "src/components/base/v-card/v-card.vue";
 
 exports.VCard = script;
