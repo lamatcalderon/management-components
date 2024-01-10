@@ -39,7 +39,6 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script$1.render = render$1;
-script$1.__scopeId = "data-v-21fa4121";
 script$1.__file = "src/components/base/v-grid/v-grid.vue";
 
 var script = vue.defineComponent({
