@@ -2,13 +2,13 @@
   "name": "management-components",
   "description": "management-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Luis Amat",
     "email": "lamatcalderon@gmail.com"
   },
-  "repository": "  https://github.com/lamatcalderon/management-components",
-  "bugs": "  https://github.com/lamatcalderon/management-components/issues",
+  "repository": "https://github.com/lamatcalderon/management-components",
+  "bugs": "https://github.com/lamatcalderon/management-components/issues",
   "main": "dist/index.js",
   "typings": "dist/src/index.d.ts",
   "files": [
