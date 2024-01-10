@@ -10,7 +10,6 @@
   "repository": "https://github.com/lamatcalderon/management-components",
   "bugs": "https://github.com/lamatcalderon/management-components/issues",
   "main": "dist/index.js",
-  "typings": "dist/src/index.d.ts",
   "files": [
     "dist/*"
   ],
