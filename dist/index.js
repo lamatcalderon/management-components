@@ -6,7 +6,7 @@ var vue = require('vue');
 
 var vButton = vue.defineComponent({});
 
-var script$2 = vue.defineComponent({
+var script$3 = vue.defineComponent({
     setup() {
         const vgrid = vue.ref();
         vue.onMounted(() => {
@@ -27,7 +27,7 @@ var script$2 = vue.defineComponent({
 const _hoisted_1$2 = { class: "v-grid" };
 const _hoisted_2$1 = { ref: "vgrid" };
 
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$2, [
     vue.createElementVNode("table", _hoisted_2$1, [
       vue.createElementVNode("thead", null, [
@@ -40,10 +40,10 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$2.render = render$2;
-script$2.__file = "src/components/base/v-grid/v-grid.vue";
+script$3.render = render$3;
+script$3.__file = "src/components/base/v-grid/v-grid.vue";
 
-var script$1 = vue.defineComponent({
+var script$2 = vue.defineComponent({
     props: {
         title: {
             type: String,
@@ -56,7 +56,7 @@ const _hoisted_1$1 = { class: "v-card" };
 const _hoisted_2 = { class: "card-title" };
 const _hoisted_3 = /*#__PURE__*/vue.createElementVNode("span", null, null, -1 /* HOISTED */);
 
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [
     vue.createElementVNode("div", _hoisted_2, [
       vue.createElementVNode("span", null, vue.toDisplayString(_ctx.title), 1 /* TEXT */),
@@ -66,12 +66,12 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1.render = render$1;
-script$1.__file = "src/components/base/v-card/v-card.vue";
+script$2.render = render$2;
+script$2.__file = "src/components/base/v-card/v-card.vue";
 
 const APP_PREFIX = "mc";
 
-var script = vue.defineComponent({
+var script$1 = vue.defineComponent({
     props: {
         label: {
             type: String,
@@ -99,7 +99,7 @@ var script = vue.defineComponent({
 
 const _hoisted_1 = ["placeholder"];
 
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass(`${_ctx.APP_PREFIX}-v-input`)
   }, [
@@ -129,9 +129,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script.render = render;
-script.__scopeId = "data-v-2488f5a9";
-script.__file = "src/components/base/v-input/v-input.vue";
+script$1.render = render$1;
+script$1.__scopeId = "data-v-2488f5a9";
+script$1.__file = "src/components/base/v-input/v-input.vue";
 
 var vModal = vue.defineComponent({
     props: {
@@ -146,9 +146,30 @@ var vModal = vue.defineComponent({
     }
 });
 
+var script = vue.defineComponent({
+    props: {
+        isOpen: {
+            type: Boolean,
+            default: false
+        }
+    }
+});
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", {
+    class: vue.normalizeClass(["overlay", { 'is-open': _ctx.isOpen, 'is-close': !_ctx.isOpen }])
+  }, [
+    vue.renderSlot(_ctx.$slots, "default")
+  ], 2 /* CLASS */))
+}
+
+script.render = render;
+script.__file = "src/components/common/v-overlay/v-overlay.vue";
+
 exports.VButton = vButton;
-exports.VCard = script$1;
-exports.VGrid = script$2;
-exports.VInput = script;
+exports.VCard = script$2;
+exports.VGrid = script$3;
+exports.VInput = script$1;
 exports.VModal = vModal;
+exports.VOverlay = script;
 //# sourceMappingURL=index.js.map
