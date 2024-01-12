@@ -17,7 +17,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
-    title: string;
     isOpen: boolean;
+    title: string;
 }, {}>;
 export default _default;

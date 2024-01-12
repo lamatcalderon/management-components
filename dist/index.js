@@ -4,6 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var vue = require('vue');
 
+var vButton = vue.defineComponent({});
+
 var script$2 = vue.defineComponent({
     setup() {
         const vgrid = vue.ref();
@@ -131,7 +133,22 @@ script.render = render;
 script.__scopeId = "data-v-2488f5a9";
 script.__file = "src/components/base/v-input/v-input.vue";
 
+var vModal = vue.defineComponent({
+    props: {
+        isOpen: {
+            type: Boolean,
+            default: false
+        },
+        title: {
+            type: String,
+            default: ""
+        }
+    }
+});
+
 exports.VCard = script$1;
 exports.VGrid = script$2;
 exports.VInput = script;
+exports.VModal = vModal;
+exports.vButton = vButton;
 //# sourceMappingURL=index.js.map
