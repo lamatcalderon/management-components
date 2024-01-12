@@ -23,6 +23,7 @@
         }"
         :placeholder="placeholder"
         :value="modelValue"
+        :disabled="disabled"
         @input="(e) => $emit('update:modelValue', e.target.value)"
       />
     </fieldset>

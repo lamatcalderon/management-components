@@ -111,7 +111,7 @@ var script$2 = vue.defineComponent({
     }
 });
 
-const _hoisted_1$1 = ["placeholder", "value"];
+const _hoisted_1$1 = ["placeholder", "value", "disabled"];
 
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -139,6 +139,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
         },
         placeholder: _ctx.placeholder,
         value: _ctx.modelValue,
+        disabled: _ctx.disabled,
         onInput: _cache[0] || (_cache[0] = (e) => _ctx.$emit('update:modelValue', e.target.value))
       }), null, 16 /* FULL_PROPS */, _hoisted_1$1)
     ], 2 /* CLASS */)
