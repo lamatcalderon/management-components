@@ -1,8 +1,8 @@
-@import '../../../assets/styles/variables';
+@import "../../../assets/styles/variables";
+
 
 $mf-advertising-form-input-line-height: $pix-19;
 
-//base
 $mf-advertising-form-legend-font-color: #959595;
 
 $mf-advertising-form-input-font-color: #1d1d1d;
@@ -10,8 +10,6 @@ $mf-advertising-form-input-font-color: #1d1d1d;
 $mf-advertising-form-fieldset-background-color: #fff;
 $mf-advertising-form-fieldset-border-color: #959595;
 
-
-//invalid
 $mf-advertising-form-legend-invalid-font-color: #ff0000;
 
 $mf-advertising-form-input-invalid-font-color: #ff0000;
@@ -19,7 +17,6 @@ $mf-advertising-form-input-invalid-font-color: #ff0000;
 $mf-advertising-form-fieldset-invalid-background-color: #ffc9c9;
 $mf-advertising-form-fieldset-invalid-border-color: #ff0000;
 
-//Disabled
 $mf-advertising-form-legend-disabled-font-color: #1d1d1d;
 
 $mf-advertising-form-input-disabled-font-color: #1d1d1d;
@@ -29,12 +26,12 @@ $mf-advertising-form-fieldset-disabled-border-color: #454545 ;
 
 $mf-advertising-form-factor-legend: $pix-6;
 
-.#{$app-prefix}-v-input {
-    .#{$app-prefix}-form {
+.mc-v-input {
+    .mc-form {
         position: relative;
         width: $per-100;
 
-        &.#{$app-prefix}-fieldset {
+        &.mc-fieldset {
             height: calc($pix-38 + $mf-advertising-form-factor-legend);
             border-radius: $pix-8;
             border: $pix-1 solid $mf-advertising-form-fieldset-border-color;
@@ -45,11 +42,11 @@ $mf-advertising-form-factor-legend: $pix-6;
                 background-color: $mf-advertising-form-fieldset-invalid-background-color;
                 border: $pix-1 solid $mf-advertising-form-fieldset-invalid-border-color;
 
-                .#{$app-prefix}-legend {
+                .mc-legend {
                     color: $mf-advertising-form-legend-invalid-font-color;
                 }
 
-                .#{$app-prefix}-input { 
+                .mc-input { 
                     color: $mf-advertising-form-input-invalid-font-color;
                 }
             }
@@ -58,17 +55,17 @@ $mf-advertising-form-factor-legend: $pix-6;
                 background-color: $mf-advertising-form-fieldset-disabled-background-color;
                 border: $pix-1 solid $mf-advertising-form-fieldset-disabled-border-color;
 
-                .#{$app-prefix}-legend {
+                .mc-legend {
                     color: $mf-advertising-form-legend-disabled-font-color;
                 }
 
-                .#{$app-prefix}-input { 
+                .mc-input { 
                     color: $mf-advertising-form-input-disabled-font-color;
                     cursor: not-allowed;
                 }
             }
 
-            .#{$app-prefix}-legend {
+            .mc-legend {
                 padding: 0 $pix-2;
                 margin-left: $pix-6;
                 font-family: var(--font-roboto);
@@ -79,7 +76,7 @@ $mf-advertising-form-factor-legend: $pix-6;
                 color: $mf-advertising-form-legend-font-color;
             }
 
-            .#{$app-prefix}-input {
+            .mc-input {
                 width: $per-100;
                 height: $per-100;
                 font-family: var(--font-baloo-2);

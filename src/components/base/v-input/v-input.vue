@@ -28,4 +28,4 @@
 </template>
 
 <script src="./v-input.ts" lang="ts"/>
-<style src="./v-input.scss" lang="scss"/>
+<style src="./v-input.scss" lang="scss" scoped/>
