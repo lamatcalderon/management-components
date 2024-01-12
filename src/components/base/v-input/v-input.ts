@@ -12,6 +12,7 @@ export default defineComponent({
             type: String,
             default: ""
         },
+        modelValue: [String, Number],
         invalid: {
             type: Boolean,
             default: false
@@ -21,9 +22,13 @@ export default defineComponent({
             default: false
         }
     },
-    setup() {
+    setup(props, { emit }) {
+        const updateValue = (event: any) => {
+            emit("input", event.target.value);
+          };
         return {
-            APP_PREFIX
+            APP_PREFIX,
+            updateValue
         }
     }
 })

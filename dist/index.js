@@ -90,6 +90,7 @@ var script$2 = vue.defineComponent({
             type: String,
             default: ""
         },
+        modelValue: [String, Number],
         invalid: {
             type: Boolean,
             default: false
@@ -99,14 +100,18 @@ var script$2 = vue.defineComponent({
             default: false
         }
     },
-    setup() {
+    setup(props, { emit }) {
+        const updateValue = (event) => {
+            emit("input", event.target.value);
+        };
         return {
-            APP_PREFIX
+            APP_PREFIX,
+            updateValue
         };
     }
 });
 
-const _hoisted_1$1 = ["placeholder"];
+const _hoisted_1$1 = ["placeholder", "value"];
 
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -132,7 +137,9 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
           invalid: _ctx.invalid,
           disabled: _ctx.disabled,
         },
-        placeholder: _ctx.placeholder
+        placeholder: _ctx.placeholder,
+        value: _ctx.modelValue,
+        onInput: _cache[0] || (_cache[0] = (e) => _ctx.$emit('update:modelValue', e.target.value))
       }), null, 16 /* FULL_PROPS */, _hoisted_1$1)
     ], 2 /* CLASS */)
   ], 2 /* CLASS */))

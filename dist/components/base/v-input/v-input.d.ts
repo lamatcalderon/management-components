@@ -7,6 +7,7 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    modelValue: (StringConstructor | NumberConstructor)[];
     invalid: {
         type: BooleanConstructor;
         default: boolean;
@@ -17,6 +18,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {
     APP_PREFIX: string;
+    updateValue: (event: any) => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     label: {
         type: StringConstructor;
@@ -26,6 +28,7 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    modelValue: (StringConstructor | NumberConstructor)[];
     invalid: {
         type: BooleanConstructor;
         default: boolean;
