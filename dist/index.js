@@ -146,9 +146,9 @@ var vModal = vue.defineComponent({
     }
 });
 
+exports.VButton = vButton;
 exports.VCard = script$1;
 exports.VGrid = script$2;
 exports.VInput = script;
 exports.VModal = vModal;
-exports.vButton = vButton;
 //# sourceMappingURL=index.js.map
