@@ -25,6 +25,29 @@
     margin: 0 5px;
   }
 }
+.v-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 1px -2px var(--panel-ng-card-box-shadow-color-1), 0 2px 2px 0 var(--panel-ng-card-box-shadow-color-2), 0 1px 5px 0 var(--panel-ng-card-box-shadow-color-3);
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+  margin: 10px;
+}
+.v-card .card-title {
+  color: var(--panel-ng-card-title-font-color);
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 35em) {
+  .v-card {
+    padding: 1em;
+  }
+}
 .v-grid table {
   width: 100%;
 }
@@ -154,27 +177,29 @@
   height: calc(100% + 6px);
 }
 
-.v-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 3px 1px -2px var(--panel-ng-card-box-shadow-color-1), 0 2px 2px 0 var(--panel-ng-card-box-shadow-color-2), 0 1px 5px 0 var(--panel-ng-card-box-shadow-color-3);
+.overlay {
+  align-items: center;
+  background-color: var(--panel-overlay-background-color);
   display: flex;
-  flex-direction: column;
-  padding: 0.2em;
-  margin: 10px;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  transition: all 0.5s ease-in;
+  width: 100%;
+  z-index: 2;
+  top: 0;
 }
-.v-card .card-title {
-  color: var(--panel-ng-card-title-font-color);
-  display: flex;
-  font-weight: bold;
-  justify-content: space-between;
-  padding-bottom: 0.5em;
-  text-transform: uppercase;
+.overlay.is-open {
+  visibility: visible;
+}
+.overlay.is-close {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (min-width: 35em) {
-  .v-card {
-    padding: 1em;
+  .overlay {
+    height: 100vh;
   }
 }
 @keyframes keyframe-scale-show {
@@ -240,30 +265,5 @@
     flex-direction: row;
     justify-content: flex-end;
     padding: 15px;
-  }
-}
-.overlay {
-  align-items: center;
-  background-color: var(--panel-overlay-background-color);
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  position: fixed;
-  transition: all 0.5s ease-in;
-  width: 100%;
-  z-index: 2;
-  top: 0;
-}
-.overlay.is-open {
-  visibility: visible;
-}
-.overlay.is-close {
-  opacity: 0;
-  visibility: hidden;
-}
-
-@media (min-width: 35em) {
-  .overlay {
-    height: 100vh;
   }
 }

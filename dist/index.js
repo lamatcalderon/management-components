@@ -27,6 +27,15 @@ var script$4 = vue.defineComponent({
                 });
             });
         });
+        vue.onUpdated(() => {
+            const cols = vgrid.value.querySelector('tr').querySelectorAll('th');
+            const rows = vgrid.value.querySelectorAll('tr');
+            rows.forEach((row) => {
+                row.querySelectorAll('td').forEach((col, index) => {
+                    col.insertAdjacentHTML('afterbegin', `<div class="theadrow">${cols[index].innerText}</div>`);
+                });
+            });
+        });
         return {
             vgrid
         };
