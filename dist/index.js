@@ -18,15 +18,6 @@ script$5.__file = "src/components/base/v-button/v-button.vue";
 var script$4 = vue.defineComponent({
     setup() {
         const vgrid = vue.ref();
-        vue.onMounted(() => {
-            const cols = vgrid.value.querySelector('tr').querySelectorAll('th');
-            const rows = vgrid.value.querySelectorAll('tr');
-            rows.forEach((row) => {
-                row.querySelectorAll('td').forEach((col, index) => {
-                    col.insertAdjacentHTML('afterbegin', `<div class="theadrow">${cols[index].innerText}</div>`);
-                });
-            });
-        });
         vue.onUpdated(() => {
             const cols = vgrid.value.querySelector('tr').querySelectorAll('th');
             const rows = vgrid.value.querySelectorAll('tr');
